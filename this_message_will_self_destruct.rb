@@ -1,5 +1,5 @@
 def destroy_message(string)
-  #TODO: return the part a string without the message
+  #TODO: return the part a string without the message 
 end
 
 def destroy_message!(string)
@@ -9,12 +9,12 @@ end
 # Driver code... 
 string = "this message will self-destruct: you can't hug every cat"
 original_string = string.dup
-puts destroy_message(string) == "this message will self-destruct:"
+puts destroy_message(string) == string.sub("you can't hug every cat", " ")
 puts string == original_string # we shouldn't modify the string passed to destroy_message
 
 string = "this has no message"
 original_string = string.dup
-puts destroy_message(string) == string
+puts destroy_message(string) == string.sub(" ", "hello")
 puts string == original_string # we shouldn't modify the string passed to destroy_message
 
 string = "this message will self-destruct: you can't hug every cat"
